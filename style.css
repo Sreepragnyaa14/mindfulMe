@@ -1,0 +1,314 @@
+/* styles.css */
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #02101e;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+span{
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 4em;
+    color: #155724;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: white 2px 2px;
+    
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    color: #155724;
+}
+
+.mood-section, .journal-prompts, .gratitude-section, .journal-entry {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #d1e7dd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+}
+
+.mood-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.mood-btn {
+    font-size: 2em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.mood-btn:hover {
+    transform: scale(1.2);
+}
+
+.prompt {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: -10px;
+    border: 1px solid #ccc;
+    border-right:9px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: white;
+    background-color: white;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: -10px;
+    
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: white;
+    font-size: 1em;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .mood-btn {
+        font-size: 1.5em;
+    }
+}
+
+
+
+/* Affirmation Section Styles */
+.affirmation-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #d1e7dd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.affirmation-section h2 {
+    color: #155724;
+}
+
+#affirmation-text {
+    font-size: 1.5em;
+    color: #155724;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+
+/* Timer Section Styles */
+.timer-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #d1e7dd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.timer-section h2 {
+    color: #155724;
+}
+
+#timer-input {
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #856404;
+    color: white;
+    background-color: #c1dfd0;
+}
+
+
+
+#start-timer-btn, #stop-timer-btn, #play-music-btn, #pause-music-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: white;
+    color: #155724;
+    border: solid #155724 1px;
+    cursor: pointer;
+}
+
+#start-timer-btn:hover, #stop-timer-btn:hover, #play-music-btn:hover, #pause-music-btn:hover {
+    background-color: #155724;
+    color: white;
+    
+}
+
+#timer-display {
+    font-size: 2em;
+    color: #155724;
+    margin-top: 15px;
+}
+
+#timer-end-message{
+    font-size:1.5em;
+    color: #155724;
+    margin-top: 10px;
+}
+
+/* Calendar Container */
+.calendar-container {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #d1e7dd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calendar {
+    text-align: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#month-year {
+    font-size: 1.5em;
+    color: #155724;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-grid div {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calendar-grid div:hover {
+    background-color: #c1dfd0; /* Slightly lighter green on hover */
+}
+
+.mood-entry {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#selected-date {
+    font-size: 1.2em;
+    color: #155724;
+    margin-bottom: 10px;
+}
+
+#mood-select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #856404;
+    background-color: #728577;
+    color: white;
+    font-size: 1em;
+}
+
+#save-mood-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: #d1e7dd;
+    color: #155724;
+    border: solid #155724 1px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#save-mood-btn:hover {
+    background-color: #155724;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .calendar-grid {
+        grid-template-columns: repeat(3, 1fr); /* Reduce number of columns on smaller screens */
+    }
+
+    #month-year {
+        font-size: 1.2em;
+    }
+}
+.happy {
+    background-color: #ffd700; /* Gold color for happy mood */
+}
+
+.sad {
+    background-color: #1e90ff; /* Dodger blue color for sad mood */
+}
+
+.angry {
+    background-color: #ff6347; /* Tomato color for angry mood */
+}
+
+.neutral {
+    background-color: #b0c4de; /* Light steel blue for neutral mood */
+}
+
+.mood-icon {
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.calendar-grid div {
+    position: relative;
+    height: 60px; /* Adjust to fit the mood icon */
+}
+
+

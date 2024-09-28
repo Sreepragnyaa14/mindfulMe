@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mental Health Journal</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>HEY THERE!</h1>
+      </header>
+
+      <section class="affirmation-section">
+        <h2>Today's Affirmation</h2>
+        <p id="affirmation-text"></p>
+      </section>
+
+      <!--<section class="mood-section">
+        <h2>How are you feeling today?</h2>
+        <div class="mood-options">
+          <button class="mood-btn">🥳</button>
+          <button class="mood-btn">😊</button>
+          <button class="mood-btn">😐</button>
+          <button class="mood-btn">😟</button>
+          <button class="mood-btn">😡</button>
+        </div>
+      </section>-->
+
+      <section class="journal-prompts">
+        <h2>Daily Reflections...</h2>
+        <div class="prompt">
+          <label for="smile"
+            >What is the <span>best thing</span> of your day that made you
+            <span>smile</span>?</label
+          >
+          <input type="text" id="smile" placeholder="Share your moment..." />
+        </div>
+        <div class="prompt">
+          <label for="improve"
+            >What did you do <span>today</span> that you want to do
+            <span>better tomorrow</span>?</label
+          >
+          <input
+            type="text"
+            id="improve"
+            placeholder="Reflect on your day..."
+          />
+        </div>
+        <div class="prompt">
+          <label for="helped"
+            >One <span>good thing</span> you did <span>today</span> ?</label
+          >
+          <input type="text" id="helped" placeholder="Describe the moment..." />
+        </div>
+      </section>
+
+      <section class="gratitude-section">
+        <h2>Gratitude</h2>
+        <div class="prompt">
+          <label for="gratitude"
+            >What are the <span>three</span> things you are
+            <span>grateful</span> for?</label
+          >
+          <input
+            type="text"
+            id="gratitude"
+            placeholder="I am grateful for..."
+          />
+        </div>
+      </section>
+
+      <section class="journal-entry">
+        <h2>Go ahead! You can let it all out here...</h2>
+        <textarea
+          id="journal"
+          rows="8"
+          placeholder="Write down your thoughts..."
+        ></textarea>
+      </section>
+
+      <!-- Meditation Timer Section -->
+      <section class="timer-section">
+        <h2>Meditation Timer</h2>
+        <p>
+          Give yourself a break from all those thoughts and let it all just go
+          for once... Take a deep breathe and take your time to meditate
+        </p>
+
+        <input
+          type="number"
+          id="timer-input"
+          placeholder="Set time in minutes"
+          min="1"
+          max="30"
+        />
+        <button id="start-timer-btn">Start Timer</button>
+        <button id="stop-timer-btn">Stop Timer</button>
+        <p id="timer-display">00:00</p>
+        <p id="timer-end-message" style="display: none">You did a great job!</p>
+        <!-- Music Controls -->
+        <div class="music-controls">
+          <button id="play-music-btn">Play Music</button>
+          <button id="pause-music-btn">Pause Music</button>
+        </div>
+      </section>
+
+      <section class="mood-calendar">
+        <div class="calendar-container">
+          <h2>Mood Tracker</h2>
+          <p>Keep track of how you have been feeling lately</p>
+          <div class="calendar">
+            <div class="calendar-header">
+              <button id="prev-month">&lt;</button>
+              <div id="month-year"></div>
+              <button id="next-month">&gt;</button>
+            </div>
+            <div class="calendar-grid">
+              <!-- Days will be dynamically generated here -->
+            </div>
+          </div>
+          <div class="mood-entry">
+            <h3 id="selected-date">Select a day</h3>
+            <label for="mood-select">Mood:</label>
+            <select id="mood-select">
+              <option value="">Select a mood</option>
+              <option value="happy">🥳 Happy</option>
+              <option value="content">😊 Content</option>
+              <option value="neutral">😐 Neutral</option>
+              <option value="sad">😢 Sad</option>
+              <option value="angry">😡 Angry</option>
+
+              <!-- Add more moods as needed -->
+            </select>
+            <button id="save-mood-btn">Save Mood</button>
+          </div>
+        </div>
+      </section>
+      <!-- Hidden Audio Elements -->
+      <audio
+        id="meditation-music"
+        src="audio\Fluidscape - Kevin MacLeod.mp3"
+        loop
+      ></audio>
+      <audio id="end-sound" src="audio\Medium Bell Ringing Far.mp3"></audio>
+    </div>
+    <script src="interact.js"></script>
+  </body>
+</html>
